@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Buzz</title>
+    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="netflix-nav">
+        <div class="nav-logo">
+            <span class="logo-red">M</span>M
+        </div>
+        <div class="nav-search">
+            <form id="searchForm" class="search-form">
+                <button type="button" class="search-icon-btn" id="searchIconBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="search-input-wrapper">
+                    <input type="text" id="movieInput" placeholder="Title" autocomplete="off">
+                </div>
+                <!-- Hidden select -->
+                <select id="modelSelect" style="display:none;">
+                    <option value="hybrid">Hybrid Model</option>
+                    <option value="content_based">Content-Based</option>
+                </select>
+            </form>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+    </nav>
+
+    <div class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <h1 class="hero-title">Movie Mania</h1>
+            <p class="hero-subtitle">Discover your next favorite story with AI-powered recommendations.</p>
+            <div class="genre-pills" id="genrePills"></div>
+        </div>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="main-container">
+        <div id="content" class="content-area"></div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=3"></script>
+</body>
+
+</html>
