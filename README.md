@@ -28,17 +28,24 @@ A production-ready content-based movie recommendation system achieving **37.32% 
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/yourusername/movie-recommendation-system.git
-cd movie-recommendation-system
+git clone https://github.com/sathwikkompalli1/Movie_Recemmendation.git
+cd Movie_Recemmendation
 pip install -r requirements.txt
 ```
 
-### 2. Start the API Server
+### 2. Download Dataset
+Download the TMDB 5000 Movie Dataset and place in `data/` folder:
+- [tmdb_5000_movies.csv](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- [tmdb_5000_credits.csv](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+
+Or run the notebooks (Part 1-7) to generate the models from scratch.
+
+### 3. Start the API Server
 ```bash
 python scripts/api_server.py
 ```
 
-### 3. Open the Web Interface
+### 4. Open the Web Interface
 Open `frontend/index.html` in your browser or visit:
 - **API Docs**: http://localhost:8000/docs
 - **Health Check**: http://localhost:8000/health
